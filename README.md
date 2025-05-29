@@ -1,4 +1,6 @@
 🛠️ Personality Quiz App
+
+
 Welcome to the Personality Quiz App – a React-based web application designed to deliver fun and insightful quizzes, complete with personalized results, image generation, and a smooth user experience.
 
 ⚠️ This project is currently under construction.

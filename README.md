@@ -1,12 +1,42 @@
-# React + Vite
+🛠️ Personality Quiz App
+Welcome to the Personality Quiz App – a React-based web application designed to deliver fun and insightful quizzes, complete with personalized results, image generation, and a smooth user experience.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+⚠️ This project is currently under construction.
 
-Currently, two official plugins are available:
+We're actively working on building out features including:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dynamic quiz questions and scoring logic
 
-## Expanding the ESLint configuration
+Context-based state management for quiz progress
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+API integration for result images
+
+User form submission
+
+Styled components and responsive design
+
+🔧 Tech Stack
+React
+
+React Router
+
+React Context API
+
+Framer Motion
+
+Image Fetching API (e.g., Unsplash or OpenAI DALL·E)
+
+🚧 To Do
+ Build final scoring logic
+
+ Connect to image generation API
+
+ Add result sharing and user input features
+
+ Mobile responsiveness
+
+ Error handling and validation
+
+🙏 Contributing
+Contributions are welcome after the initial structure is in place. Feel free to fork the repo and submit a PR once the core features are live.
+

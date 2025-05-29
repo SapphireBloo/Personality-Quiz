@@ -1,0 +1,89 @@
+/* App.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-container {
+  background-color: rgba(30, 30, 30, 0.6); /* translucent dark */
+  backdrop-filter: blur(8px);             /* optional frosted glass effect */
+  -webkit-backdrop-filter: blur(8px);     /* Safari support */
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+  padding-top: 5rem;
+}
+
+
+
+/* Form elements */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 1.2rem;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  outline: 2px solid #4dd0e1;
+}
+
+button {
+  background-color: #4dd0e1;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #26c6da;
+}
+
+/* Results content */
+.results-content {
+  background-color: rgba(0,0,0,0.7);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.artwork img {
+  width: 100%;
+  max-width: 500px; 
+  height: 500px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.artwork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+

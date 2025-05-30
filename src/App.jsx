@@ -50,7 +50,7 @@ const quoteTags = {
   Earth: "courage",
 };
 
-const ACCESS_KEY = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
+const accessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 
 export default function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

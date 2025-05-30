@@ -78,7 +78,7 @@ export default function App() {
   async function fetchArtwork(keyword) {
     try {
       const response = await fetch(
-  `https://api.unsplash.com/search/photos?query=${keyword}&client_id=${ACCESS_KEY}&per_page=1`
+  `https://api.unsplash.com/search/photos?query=${keyword}&client_id=${accessKey}&per_page=1`
 );
       const data = await res.json();
       if (data && data.urls) {

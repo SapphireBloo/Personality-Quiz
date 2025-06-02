@@ -64,6 +64,14 @@ export default function App() {
     setCurrentQuestionIndex(currentQuestionIndex + 1);
   }
 
+  function resetQuiz() {
+    setAnswers([]);
+    setCurrentQuestionIndex(0);
+    setElement("");
+    setArtwork(null);
+    setQuote({ content: "", author: "" });
+  }
+
   function determineElement(answers) {
     const counts = {};
     answers.forEach((answer) => {
@@ -75,29 +83,28 @@ export default function App() {
     );
   }
 
-async function fetchArtwork(keyword) {
-  try {
-    const response = await fetch(
-      `https://api.unsplash.com/search/photos?query=${keyword}&client_id=${accessKey}&per_page=1`
-    );
-    const data = await response.json(); 
-    if (data && data.results && data.results.length > 0) {
-      const photo = data.results[0];
-      setArtwork({
-        primaryImage: photo.urls.regular,
-        title: photo.description || photo.alt_description || "Artwork",
-        artistDisplayName: photo.user.name,
-        objectDate: photo.created_at ? photo.created_at.slice(0, 10) : "",
-      });
-    } else {
+  async function fetchArtwork(keyword) {
+    try {
+      const response = await fetch(
+        `https://api.unsplash.com/search/photos?query=${keyword}&client_id=${accessKey}&per_page=1`
+      );
+      const data = await response.json(); 
+      if (data && data.results && data.results.length > 0) {
+        const photo = data.results[0];
+        setArtwork({
+          primaryImage: photo.urls.regular,
+          title: photo.description || photo.alt_description || "Artwork",
+          artistDisplayName: photo.user.name,
+          objectDate: photo.created_at ? photo.created_at.slice(0, 10) : "",
+        });
+      } else {
+        setArtwork(null);
+      }
+    } catch (error) {
+      console.error("Error fetching artwork:", error);
       setArtwork(null);
     }
-  } catch (error) {
-    console.error("Error fetching artwork:", error);
-    setArtwork(null);
   }
-}
-
 
   async function fetchQuote(element) {
     const tag = quoteTags[element] || "inspirational";
@@ -126,7 +133,7 @@ async function fetchArtwork(keyword) {
 
   return (
     <UserProvider>
-      <Header />
+      <Header onHomeClick={resetQuiz} /> {/* Pass reset function */}
       <Routes>
         <Route path="/" element={<UserForm />} />
         <Route

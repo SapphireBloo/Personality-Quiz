@@ -35,10 +35,6 @@ src/
 ├── assets/ # Static images and styles
 └── App.jsx # Root app component
 
-yaml
-Copy
-Edit
-
 ## 🙋‍♀️ Author
 
 Created by [SapphireBloo](https://github.com/SapphireBloo)

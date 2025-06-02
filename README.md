@@ -27,7 +27,10 @@ Framer Motion
 Image API Integration (e.g., Unsplash, DALL·E)
 
 📸 Live Demo
-👉 Try the Quiz Now
+## 📸 Live Demo
+
+👉 [**Try the Quiz Now**]([https://your-correct-vercel-link.com](https://personality-quiz-5jnaqd524-sapphirebloos-projects.vercel.app/))
+
 
 📂 Project Structure
 bash

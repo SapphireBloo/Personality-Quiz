@@ -43,12 +43,25 @@ const elements = {
   "Winter ❄️": "Water",
 };
 
-const quoteTags = {
-  Fire: "war",
-  Water: "tranquil",
-  Air: "whimsy",
-  Earth: "courage",
+const localQuotes = {
+  Fire: {
+    content: "Passion is energy. Feel the power that comes from focusing on what excites you.",
+    author: "Oprah Winfrey",
+  },
+  Water: {
+    content: "Nothing is softer or more flexible than water, yet nothing can resist it.",
+    author: "Lao Tzu",
+  },
+  Earth: {
+    content: "The earth does not belong to us. We belong to the earth.",
+    author: "Chief Seattle",
+  },
+  Air: {
+    content: "The air up there in the clouds is very pure and fine, bracing and delicious.",
+    author: "Mark Twain",
+  },
 };
+
 
 const accessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 
@@ -106,21 +119,11 @@ export default function App() {
     }
   }
 
-  async function fetchQuote(element) {
-    const tag = quoteTags[element] || "inspirational";
-    try {
-      const res = await fetch(`https://api.quotable.io/random?tags=${tag}`);
-      const data = await res.json();
-      if (data && data.content) {
-        setQuote({ content: data.content, author: data.author });
-      } else {
-        setQuote({ content: "Stay inspired!", author: "Unknown" });
-      }
-    } catch (error) {
-      console.error("Error fetching quote:", error);
-      setQuote({ content: "Stay inspired!", author: "Unknown" });
-    }
-  }
+function fetchQuote(element) {
+  const fallback = { content: "Stay inspired!", author: "Unknown" };
+  setQuote(localQuotes[element] || fallback);
+}
+
 
   useEffect(() => {
     if (currentQuestionIndex === questions.length) {

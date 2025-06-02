@@ -7,9 +7,10 @@ export default function Results({ element, artwork, quote }) {
 
   return (
     <div className={`page-container results-container ${element.toLowerCase()}`}>
-      <p>
-        <strong>{name}</strong>, your personality matches: <strong>{element}</strong>
-      </p>
+     <p className={`element-text ${element.toLowerCase()}`}>
+  <strong>{name}</strong>, your personality matches: <strong>{element}</strong>
+</p>
+
 
       {artwork ? (
         <div className="artwork">

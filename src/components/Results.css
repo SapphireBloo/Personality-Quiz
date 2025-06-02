@@ -74,3 +74,60 @@
   font-size: 0.9rem;
   color: #7ab8c9;
 }
+
+/* Common styles */
+.element-text {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* FIRE animation */
+.fire {
+  color: #ff7043;
+  animation: burn 1.5s infinite alternate;
+  text-shadow: 0 0 10px orange, 0 0 20px red;
+}
+
+@keyframes burn {
+  0% { text-shadow: 0 0 10px orange; transform: scale(1); }
+  100% { text-shadow: 0 0 20px red; transform: scale(1.05); }
+}
+
+/* WATER animation */
+.water {
+  color: #4dd0e1;
+  position: relative;
+  animation: drip 2s infinite ease-in-out;
+}
+
+@keyframes drip {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* EARTH styling */
+.earth {
+  color: #a1887f;
+  background: #3e2723;
+  box-shadow: 0 0 15px #2e1e18 inset;
+  border: 3px solid #4e342e;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+}
+
+/* AIR animation */
+.air {
+  color: #ffffff;
+  animation: breeze 3s ease-in-out infinite;
+}
+
+@keyframes breeze {
+  0%   { transform: translateX(-4px) rotate(-1deg); }
+  50%  { transform: translateX(4px) rotate(1deg); }
+  100% { transform: translateX(-4px) rotate(-1deg); }
+}
+
